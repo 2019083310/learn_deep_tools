@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/@wangeditor/editor@latest/dist/css/style.css"
+      rel="stylesheet"
+    />
+    <title>wangEditor的使用</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .editor-wrapper {
+        border: 1px solid #ccc;
+        z-index: 100;
+      }
+
+      .tool-bar-wrap {
+        border-bottom: 1px solid #ccc;
+      }
+
+      .editor-bar-wrap {
+        height: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 定义html结构 -->
+    <div class="editor-wrapper">
+      <!-- 工具栏 -->
+      <div class="tool-bar-wrap"></div>
+      <!-- 编辑器 -->
+      <div class="editor-bar-wrap"></div>
+    </div>
+
+    <!-- wangEditor的引入:cdn -->
+    <script src="https://unpkg.com/@wangeditor/editor@latest/dist/index.js"></script>
+    <script src="./src/index.js"></script>
+  </body>
+</html>

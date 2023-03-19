@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.min.css"
+    />
+    <title>Document</title>
+    <!-- photo viewer的基本使用：通过cdn引入 -->
+    <script src="https://cdn.jsdelivr.net/npm/three/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.min.js"></script>
+  </head>
+  <body>
+    <!-- the viewer container must have a defined size -->
+    <div id="viewer" style="width: 100vw; height: 100vh"></div>
+
+    <script>
+      const viewer = new PhotoSphereViewer.Viewer({
+        container: document.querySelector("#viewer"),
+        panorama: "../assets/01e32cc90dd34191a09a4f866dd6ab31.jpg",
+      });
+    </script>
+  </body>
+</html>

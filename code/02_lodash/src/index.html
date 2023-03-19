@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lodash的基本使用</title>
+    <!-- lodash的使用方式一：通过cdn的方式引入 -->
+    <!-- <script src="https://cdn.bootcdn.net/ajax/libs/lodash.js/4.17.21/lodash.js"></script> -->
+    <!-- lodash的使用方式二：通过下载本地引入 -->
+    <script src="../core/index.js"></script>
+    <!-- lodash的使用方式三：npm下载 import、require 引入 -->
+  </head>
+  <body>
+    值得一提的是，尽管es6+已经支持了很多功能，但是lodash还是不能取代的，具体的原因可以有很多看法:
+    1.lodash不仅提供的是很多api，提供的是面向函数编程的语法。
+    2.lodash当遇到数据复杂的时候，提供了惰性计算，提高了性能，这是原生js没有的。
+    3.lodash内置的许多语法，es6+是没有的，比如：_.forEach()可以遍历对象，集合。
+    4.lodash现在也在更替，支持Node，amd/cmd，esModule等引入方式，并且是可以按需引入的。
+    5.lodash在node环境做的兼容，以及浏览器兼容可以让我们少做很多测试
+    <input type="text" class="input">
+
+    <!-- <script src="./01_数组中常用方法/index.js" type="module"></script> -->
+    <!-- <script src="./02_函数中常用方法/index.js"></script> -->
+    <script src="./03_对象中常用方法/index.js"></script>
+    <!-- <script src="./04_字符串中常用方法/index.js"></script> -->
+    <!-- <script src="./05_math中常用方法/index.js"></script> -->
+  </body>
+</html>
