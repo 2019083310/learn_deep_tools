@@ -1,0 +1,25 @@
+{
+  "whiteList": {
+    "p": ["id", "style"],
+    "img":["src","alt","title"],
+    "a":["href"],
+    "html":[],
+    "head":[],
+    "body":[],
+    "link":["href","rel"],
+    "meta":["name","content","charset","http-equiv"],
+    "title":[]
+  },
+  "css": {
+    "whiteList": {
+      "p": {
+        "top": true,
+        "left": true,
+        "width": true,
+        "height": true
+      }
+    }
+  },
+  "stripIgnoreTag": true,
+  "stripIgnoreTagBody": ["script"]
+}
