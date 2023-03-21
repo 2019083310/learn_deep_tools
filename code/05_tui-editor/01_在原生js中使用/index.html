@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.css" />
+  <link rel="stylesheet" href="https://uicdn.toast.com/tui-editor/latest/tui-editor.css">
+  </link>
+  <link rel="stylesheet" href="https://uicdn.toast.com/tui-editor/latest/tui-editor-contents.css">
+  </link>
+
+</head>
+
+<body>
+  <div id="editorSection"></div>
+  <div id="viewerSection"></div>
+  <!-- js  该js必须放置在body标签之后 -->
+    <script src="https://uicdn.toast.com/tui-editor/latest/tui-editor-Editor-full.min.js"></script>
+  <script>
+    let editor = new toastui.Editor({
+      el: document.querySelector('#editorSection'),
+      initialEditType: 'markdown', // 编辑器markdown 还是 其他形式
+      previewStyle: 'vertical', // 是否是切一半的页面，另外参数 tab
+      height: window.innerHeight, // 高度
+      hideModeSwitch: true, // 不展示底部tab切换
+      placeholder: '请输入正文...',
+    });
+    
+    let viewer = new toastui.Editor.factory({
+      el: document.querySelector('#viewerSection'),
+      height: window.innerHeight + 'px',
+      viewer: true,
+      initialValue: '初始化值'
+    });
+    </script>
+</body>
+
+</html>
