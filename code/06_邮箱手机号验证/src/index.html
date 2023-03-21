@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>邮箱</title>
+  </head>
+  <body>
+    <button onclick="handleSendEmailClick()">发送邮箱</button>
+    <script>
+      const handleSendEmailClick = async () => {
+        console.log(1)
+        const res = await fetch("http://localhost:3000/api/email/send", {
+          method: "post",
+          headers:{
+            "Content-Type":"application/json"
+          },
+          body: JSON.stringify({
+            email: "2330053403@qq.com",
+          }),
+        });
+
+        console.log(res)
+        const data=res.json()
+        alert(data.message)
+      };
+    </script>
+  </body>
+</html>
