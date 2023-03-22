@@ -21,8 +21,8 @@ const nodeEmail = nodemailer.createTransport({
   port: 465,
   secure: true,
   auth: {
-    user: "2330053403@qq.com",
-    pass: "gmiycaxvrlmueadg", //开启发送邮箱的密钥
+    user: "xxxxxxxxxx@qq.com",
+    pass: "xxxxxxxxxx", //开启发送邮箱的密钥
   },
 });
 
@@ -35,7 +35,7 @@ router.post("/email/send", async (ctx, next) => {
 
   // ?邮件配置
   const mainOptions = {
-    from: `"酒客"<2330053403@qq.com>`, //发送方
+    from: `"酒客"<xxxxxxxxxx@qq.com>`, //发送方
     to: email, //接收方
     subject: code, //验证码
     html: `
