@@ -1,6 +1,9 @@
 lockfileVersion: 5.4
 
 specifiers:
+  dot-env: ^0.0.1
+  dotenv: 16.0.1
+  ioredis: 4.16.2
   koa: ^2.14.1
   koa-bodyparser: ^4.4.0
   koa-router: ^12.0.0
@@ -10,6 +13,9 @@ specifiers:
   tencentcloud-sdk-nodejs: ^4.0.563
 
 dependencies:
+  dot-env: 0.0.1
+  dotenv: 16.0.1
+  ioredis: 4.16.2
   koa: 2.14.1
   koa-bodyparser: 4.4.0
   koa-router: 12.0.0
@@ -111,6 +117,11 @@ packages:
       fsevents: 2.3.2
     dev: false
 
+  /cluster-key-slot/1.1.2:
+    resolution: {integrity: sha512-RMr0FhtfXemyinomL4hrWcYJxmX6deFdCxpJzhDttxgO1+bcCnkk+9drydLVDmAMG7NE6aN/fl4F7ucU/90gAA==}
+    engines: {node: '>=0.10.0'}
+    dev: false
+
   /co-body/6.1.0:
     resolution: {integrity: sha512-m7pOT6CdLN7FuXUcpuz/8lfQ/L77x8SchHCF4G0RBTJO20Wzmhn5Sp4/5WsKy8OSpifBSUrmg83qEqaDHdyFuQ==}
     dependencies:
@@ -197,6 +208,11 @@ packages:
     resolution: {integrity: sha512-bd2L678uiWATM6m5Z1VzNCErI3jiGzt6HGY8OVICs40JQq/HALfbyNJmp0UDakEY4pMMaN0Ly5om/B1VI/+xfQ==}
     dev: false
 
+  /denque/1.5.1:
+    resolution: {integrity: sha512-XwE+iZ4D6ZUB7mfYRMb5wByE8L74HCn30FBN7sWnXksWc1LO1bPDl67pBR9o/kC4z/xSNAwkMYcGgqDV3BE3Hw==}
+    engines: {node: '>=0.10'}
+    dev: false
+
   /depd/1.1.2:
     resolution: {integrity: sha512-7emPTl6Dpo6JRXOXjLRxck+FlLRX5847cLKEn00PLAgc3g2hTZZgr+e4c2v6QpSmLeFP3n5yUo7ft6avBK/5jQ==}
     engines: {node: '>= 0.6'}
@@ -210,6 +226,15 @@ packages:
   /destroy/1.2.0:
     resolution: {integrity: sha512-2sJGJTaXIIaR1w4iJSNoN0hnMY7Gpc/n8D4qSCJw8QqFWXf7cuAgnEHxBpweaVcPevC2l3KpjYCx3NypQQgaJg==}
     engines: {node: '>= 0.8', npm: 1.2.8000 || >= 1.4.16}
+    dev: false
+
+  /dot-env/0.0.1:
+    resolution: {integrity: sha512-SajHtzm3v7yjMH8DW9xY+4i7Zv/cN3aMtLVy0mRMuZu8L9qRCR7CNqcl4KBbG27e5Up4BpSlEyPXXLNbSAe2DQ==}
+    dev: false
+
+  /dotenv/16.0.1:
+    resolution: {integrity: sha512-1K6hR6wtk2FviQ4kEiSjFiH5rpzEVi8WW0x96aztHVMhEspNpc4DVOUTEHtEva5VThQ8IaBX1Pe4gSzpVVUsKQ==}
+    engines: {node: '>=12'}
     dev: false
 
   /ee-first/1.1.1:
@@ -362,6 +387,23 @@ packages:
     resolution: {integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==}
     dev: false
 
+  /ioredis/4.16.2:
+    resolution: {integrity: sha512-hlRK9q9K8pWpYIxUh079dWUWECiGNdI7+/AR21pgeqIBXQzjVKFnz0wXvmhEQZV3Hvv4saQpvJww9SkjwvPXZA==}
+    engines: {node: '>=6'}
+    dependencies:
+      cluster-key-slot: 1.1.2
+      debug: 4.3.4
+      denque: 1.5.1
+      lodash.defaults: 4.2.0
+      lodash.flatten: 4.4.0
+      redis-commands: 1.5.0
+      redis-errors: 1.2.0
+      redis-parser: 3.0.0
+      standard-as-callback: 2.1.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
   /is-binary-path/2.1.0:
     resolution: {integrity: sha512-ZMERYes6pDydyuGidse7OsHxtbI7WVeUEozgR/g7rd0xUimYNlvZRE/K2MgZTjWy725IfelLeVcEM97mmtRGXw==}
     engines: {node: '>=8'}
@@ -469,6 +511,14 @@ packages:
   /koa2-cors/2.0.6:
     resolution: {integrity: sha512-JRCcSM4lamM+8kvKGDKlesYk2ASrmSTczDtGUnIadqMgnHU4Ct5Gw7Bxt3w3m6d6dy3WN0PU4oMP43HbddDEWg==}
     engines: {node: '>= 7.6.0'}
+    dev: false
+
+  /lodash.defaults/4.2.0:
+    resolution: {integrity: sha512-qjxPLHd3r5DnsdGacqOMU6pb/avJzdh9tFX2ymgoZE27BmjXrNy/y4LoaiTeAb+O3gL8AfpJGtqfX/ae2leYYQ==}
+    dev: false
+
+  /lodash.flatten/4.4.0:
+    resolution: {integrity: sha512-C5N2Z3DgnnKr0LOpv/hKCgKdb7ZZwafIrsesve6lmzvZIRZRGaZ/l6Q8+2W7NaT+ZwO3fFlSCzCzrDCFdJfZ4g==}
     dev: false
 
   /media-typer/0.3.0:
@@ -615,6 +665,22 @@ packages:
       picomatch: 2.3.1
     dev: false
 
+  /redis-commands/1.5.0:
+    resolution: {integrity: sha512-6KxamqpZ468MeQC3bkWmCB1fp56XL64D4Kf0zJSwDZbVLLm7KFkoIcHrgRvQ+sk8dnhySs7+yBg94yIkAK7aJg==}
+    dev: false
+
+  /redis-errors/1.2.0:
+    resolution: {integrity: sha512-1qny3OExCf0UvUV/5wpYKf2YwPcOqXzkwKKSmKHiE6ZMQs5heeE/c8eXK+PNllPvmjgAbfnsbpkGZWy8cBpn9w==}
+    engines: {node: '>=4'}
+    dev: false
+
+  /redis-parser/3.0.0:
+    resolution: {integrity: sha512-DJnGAeenTdpMEH6uAJRK/uiyEIH9WVsUmoLwzudwGJUwZPp80PDBWPHXSAGNPwNvIXAbe7MSUB1zQFugFml66A==}
+    engines: {node: '>=4'}
+    dependencies:
+      redis-errors: 1.2.0
+    dev: false
+
   /safe-buffer/5.2.1:
     resolution: {integrity: sha512-rp3So07KcdmmKbGvgaNxQSJr7bGVSVk5S9Eq1F+ppbRo70+YeaDxkw5Dd8NPN+GD6bjnYm2VuPuCXmpuYvmCXQ==}
     dev: false
@@ -650,6 +716,10 @@ packages:
     engines: {node: '>=8.10.0'}
     dependencies:
       semver: 7.0.0
+    dev: false
+
+  /standard-as-callback/2.1.0:
+    resolution: {integrity: sha512-qoRRSyROncaz1z0mvYqIE4lCd9p2R90i6GxW3uZv5ucSu8tU7B5HXUP1gG8pVZsYNVaXjk8ClXHPttLyxAL48A==}
     dev: false
 
   /statuses/1.5.0:

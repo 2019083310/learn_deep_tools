@@ -8,9 +8,13 @@
   </head>
   <body>
     <button onclick="handleSendEmailClick()">发送邮箱</button>
+    <button onclick="handleSendPhoneClick()">发送短信验证码</button>
+    <button onclick="handleSendPhoneTestClick()">
+      基于tencent发送短信验证码
+    </button>
+    <button onclick="handleVerifyPhoneClick()">验证短信验证码</button>
     <script>
       const handleSendEmailClick = async () => {
-        console.log(1)
         const res = await fetch("http://localhost:3000/api/email/send", {
           method: "post",
           headers:{
@@ -25,6 +29,56 @@
         const data=res.json()
         alert(data.message)
       };
+
+      const handleSendPhoneClick = async () => {
+        const res = await fetch("http://localhost:3000/api/phone/cat/send", {
+          method: "post",
+          headers:{
+            "Content-Type":"application/json"
+          },
+          body: JSON.stringify({
+            phone: "19931077936",
+          }),
+        });
+
+        console.log(res)
+        const data=res.json()
+        console.log(data)
+      };
+
+      const handleSendPhoneTestClick = async () => {
+        const res = await fetch("http://localhost:3000/api/phone/cat/send", {
+          method: "post",
+          headers:{
+            "Content-Type":"application/json"
+          },
+          body: JSON.stringify({
+            phone: "19931077936",
+            method:'getSms'
+          }),
+        });
+
+        console.log(res)
+        const data=res.json()
+        console.log(data)
+      };
+
+      const handleVerifyPhoneClick=async ()=>{
+        const res = await fetch("http://localhost:3000/api/phone/cat/verify", {
+          method: "post",
+          headers:{
+            "Content-Type":"application/json"
+          },
+          body: JSON.stringify({
+            phone: "19931077936",
+            method:'login',
+            code:"791488"
+          }),
+        });
+
+        console.log(res)
+        const data=res.json()
+      }
     </script>
   </body>
 </html>
