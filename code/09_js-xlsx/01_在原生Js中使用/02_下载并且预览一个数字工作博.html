@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="TableContainer"></div>
+    <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+    <script>
+      (async () => {
+        /* replace with the URL of the file */
+        const URL_TO_DOWNLOAD = "https://sheetjs.com/pres.numbers";
+        const ab = await (await fetch(URL_TO_DOWNLOAD)).arrayBuffer();
+
+        /* Parse file and get first worksheet */
+        const wb = XLSX.read(ab);
+        // console.log(wb)
+        const wsname = wb.SheetNames[0];
+        const ws = wb.Sheets[wsname];
+
+        /* Generate HTML */
+        var output = document.getElementById("TableContainer");
+        output.innerHTML = XLSX.utils.sheet_to_html(ws);
+      })();
+    </script>
+  </body>
+</html>

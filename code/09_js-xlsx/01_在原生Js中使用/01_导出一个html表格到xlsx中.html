@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table id="TableToExport">
+      <thead>
+        <th>姓名</th>
+        <th>年龄</th>
+        <th>身高</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>coder</td>
+          <td>18</td>
+          <td>1.88</td>
+        </tr>
+      </tbody>
+    </table>
+    <button id="sheetjsexport"><b>Export as XLSX</b></button>
+    <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+    <script>
+      document
+        .getElementById("sheetjsexport")
+        .addEventListener("click", function () {
+          /* Create worksheet from HTML DOM TABLE */
+          var wb = XLSX.utils.table_to_book(
+            document.getElementById("TableToExport")
+          );
+          /* Export to file (start a download) */
+          XLSX.writeFile(wb, "SheetJSTable.xlsx");
+        });
+    </script>
+  </body>
+</html>
