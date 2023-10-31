@@ -1,0 +1,24 @@
+{
+  "name": "learn_deep_tools",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coderyliu/learn_deep_tools.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coderyliu/learn_deep_tools/issues"
+  },
+  "homepage": "https://github.com/coderyliu/learn_deep_tools#readme",
+  "dependencies": {
+    "jspdf": "^2.5.1",
+    "libreoffice-convert": "^1.4.1",
+    "pptx2pdf": "^1.0.10"
+  }
+}
